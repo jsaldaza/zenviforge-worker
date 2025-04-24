@@ -1,6 +1,5 @@
-// worker.js
-export default {
-  async fetch(request) {
-    return new Response("¡Hola desde Zenviforge Worker! Tu contenido pronto estará en vivo.");
-  }
-};
+name = "zenviforge-worker"
+type = "javascript"
+account_id = "TU_ACCOUNT_ID"
+workers_dev = true
+compatibility_date = "2025-04-24"
