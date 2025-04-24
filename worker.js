@@ -6,7 +6,7 @@ const SLUG_TO_PAGE = {
   "": "1dd8e8096a97800aa251e18cb2ef5234",
 };
 
-const PAGE_TITLE = "Zenviforge – Centro de creación consciente";
+const PAGE_TITLE = "Zenviforge - Centro de creación consciente";
 const PAGE_DESCRIPTION =
   "Un espacio para desarrolladores que construyen con claridad, intención y fluidez.";
 const GOOGLE_FONT = "Inter";
