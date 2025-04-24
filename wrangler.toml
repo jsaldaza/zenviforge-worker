@@ -3,5 +3,7 @@ main = "worker.js"
 compatibility_date = "2025-04-24"
 account_id = "26a73ceb502bf4fd9c840ac8e5920ce7c"
 
-zone_id = "4dbbea601626e55ad6f39ae6dbd2aed3"
-routes = ["zenviforge.dev/*"]
+[deployments]
+zones = [
+  { zone_id = "4dbbea601626e55ad6f39ae6dbd2aed3", routes = ["zenviforge.dev/*"] }
+]
