@@ -1,3 +1,5 @@
+// worker.js
+
 const MY_DOMAIN = "zenviforge.dev";
 
 const SLUG_TO_PAGE = {
