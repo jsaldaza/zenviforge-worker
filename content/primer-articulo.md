@@ -1,16 +1,21 @@
-# Cómo construí zenviforge.dev desde cero usando Notion, Workers y Markdown
+---
+title: "Mi primer artículo en Zenviforge"
+date: "2025-04-24"
+description: "Exploramos cómo montar un blog técnico con Workers y Markdown."
+---
 
-Este artículo explica cómo monté mi sitio web profesional usando herramientas gratuitas y potentes como Cloudflare Workers, Notion y Wrangler CLI.
+# ¡Bienvenido a Zenviforge Blog! 🚀
 
-## Stack utilizado
-- ✅ Notion como CMS
-- ✅ Cloudflare como DNS + Hosting
-- ✅ Workers para lógica personalizada
-- ✅ Wrangler como deploy tool
+Este es el primer artículo técnico de prueba.  
+En este espacio compartiremos ideas, tutoriales y herramientas para desarrolladores como vos.
 
-## Lecciones aprendidas
-- El poder de la simplicidad.
-- Aprender haciendo (con errores incluidos).
-- La importancia del dominio propio.
+## ¿Qué vas a encontrar acá?
 
-> “No esperes a ser experto para empezar. Empezá, y te volverás experto.”
+- Artículos en formato Markdown
+- Procesados por un Worker en Cloudflare
+- Con diseño minimalista y rendimiento extremo 💨
+
+## Código de ejemplo
+
+```js
+console.log("Hola mundo desde Zenviforge!");

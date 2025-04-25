@@ -1,0 +1,110 @@
+# 🧠 Estructura técnica y flujo completo de Zenviforge
+
+## 🚀 Objetivo del proyecto
+
+Construir una **plataforma técnica minimalista** para publicar contenido educativo, artículos técnicos y documentación, utilizando **Cloudflare Workers**, **Markdown** y **Visual Studio Code** (o Notion como alternativa inicial).
+
+---
+
+## 🧩 Tecnologías y herramientas usadas
+
+| Herramienta              | Propósito principal                                      |
+|--------------------------|----------------------------------------------------------|
+| **Cloudflare Workers**   | Hosting serverless, donde corre toda la lógica del sitio |
+| **Wrangler CLI**         | Herramienta para compilar y desplegar el Worker          |
+| **Visual Studio Code**   | Editor local para gestionar código y Markdown            |
+| **Markdown (.md)**       | Formato liviano para escribir artículos con estilo       |
+| **front-matter**         | Extrae metadatos (título, fecha, descripción) de los `.md` |
+| **marked**               | Convierte Markdown a HTML dinámicamente                 |
+| **GitHub**               | Control de versiones y backup                           |
+| **Google Fonts**         | Tipografía personalizada (Inter)                        |
+| **Modo oscuro CSS**      | Estilo adaptativo al sistema del usuario                |
+
+---
+
+## 🧱 Estructura general del proyecto
+
+```
+zenviforge-worker/
+├── content/                     # Aquí van los artículos en Markdown
+│   └── primer-articulo.md
+├── script/
+│   └── newPost.js              # Script para generar nuevos artículos automáticamente
+├── src/
+│   └── index.js                # Código principal del Worker (rutas y lógica)
+├── package.json                # Scripts y dependencias
+└── wrangler.toml               # Configuración para desplegar con Wrangler
+```
+
+---
+
+## 🗺️ Diagrama del flujo Happy Path
+
+1. ✍️ Escribís un artículo con:
+   ```bash
+   npm run new-post "Mi nuevo post"
+   ```
+   Se crea un `.md` en `/content` con título, fecha y estructura base.
+
+2. ✨ Escribís el contenido en Markdown
+   - Usás títulos, listas, código, bloques quote, etc.
+
+3. 🧠 El Worker (`index.js`):
+   - Lee las rutas `/`, `/about`, `/blog`, `/blog/:slug`
+   - `/blog` genera una lista con título, fecha, descripción
+   - `/blog/slug` transforma el `.md` en HTML con `marked`
+
+4. 🌐 Desplegás con Wrangler:
+   ```bash
+   npm run deploy
+   ```
+   ¡Y tu web queda online en `https://zenviforge.dev`!
+
+---
+
+## 🎯 Para qué sirve este enfoque
+
+Ideal para:
+
+- Crear un **blog técnico personalizado**
+- Documentar proyectos y publicar tutoriales
+- Generar **marca personal como desarrollador**
+- Compartir conocimiento sin depender de Medium/Dev.to
+- Aplicar buenas prácticas de frontend, serverless y SEO básico
+
+---
+
+## 💡 Notion como alternativa
+
+También podés montar tu blog sobre Notion público (con soluciones como Fruition o Potion), pero:
+
+- ✅ Es rápido y sin código
+- ⚠️ Tiene límites de personalización y SEO
+- ✅ Ideal para contenido educativo más informal o microblogging
+
+---
+
+## 💎 Tips PRO & PRO ORO
+
+### ⚡ PRO
+
+- Usá `front-matter` para definir título, descripción y fecha
+- Activá `robots.txt` y `sitemap.xml` para mejorar el SEO
+- Mostrá enlaces internos entre posts para mejorar navegación
+
+### 🥇 PRO ORO
+
+- Automatizá publicación con GitHub Actions
+- Monetizá con enlaces afiliados o botón de contacto
+- Expandí con `/cv`, `/resources`, `/labs`, `/newsletter`
+- Usá frases técnicas como identidad
+- Mantené la estructura simple pero escalable
+
+---
+
+## 🧘‍♂️ Conclusión
+
+Zenviforge es un dojo digital: minimalista, potente y centrado en el contenido.
+Cada línea de código está pensada para escalar con vos.
+
+✨ Tu conocimiento ahora tiene un lugar donde vivir, crecer y brillar.
